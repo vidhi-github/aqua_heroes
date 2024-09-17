@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Groundwater Conservation Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Groundwater Conservation Game</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the Website</a></li>
+                <li><a href="#">Online Chat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Give Your Reviews</h2>
+            <form id="reviewForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="rating">Rating (out of 5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required><br>
+
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
+
+                <label for="improvement">Any Improvement Suggestions:</label>
+                <textarea id="improvement" name="improvement" rows="4" cols="50"></textarea><br>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow Us</p>
+        <a href="https://twitter.com"><img src="icons/twitter.png" alt="Twitter"></a>
+        <a href="https://facebook.com"><img src="icons/facebook.png" alt="Facebook"></a>
+        <a href="https://instagram.com"><img src="icons/instagram.png" alt="Instagram"></a>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
