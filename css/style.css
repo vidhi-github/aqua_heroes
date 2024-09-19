@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
+    background-image: url('../images/background.jpeg'); /* Background image for the website */
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -33,6 +36,18 @@ main {
     text-align: center;
 }
 
+.images-section {
+    margin-top: 20px;
+}
+
+.home-image {
+    height:300px;
+    width: 400px;
+    margin: 0 10px;
+    border: 2px solid #00796b;
+    border-radius: 10px;
+}
+
 footer {
     background-color: #00796b;
     color: white;
@@ -48,8 +63,44 @@ footer a img {
     margin: 0 5px;
 }
 
-textarea {
-    width: 80%;
+/* Form Fixes for Reviews Page */
+form {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%; /* Ensure form takes up full width */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="number"], form textarea {
+    width: 100%; /* Ensure inputs and textareas take up full width */
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #00796b;
+}
+
+form button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure button takes up full width */
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
+#errorMessage {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
 }

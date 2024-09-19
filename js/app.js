@@ -1,12 +1,34 @@
-document.getElementById('reviewForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-    const username = document.getElementById('username').value;
-    const rating = document.getElementById('rating').value;
-    const feedback = document.getElementById('feedback').value;
-    const improvement = document.getElementById('improvement').value;
+    // Collect form data
+    const username = document.getElementById('username').value.trim();
+    const rating = document.getElementById('rating').value.trim();
+    const feedback = document.getElementById('feedback').value.trim();
+    const errorMessage = document.getElementById('errorMessage');
 
-    alert(`Thank you, ${username}! Your review with rating ${rating}/5 has been submitted.`);
-    
-    // You can add AJAX calls here to send the data to the backend or save in local storage.
+    // Validate username
+    if (username === "") {
+        errorMessage.textContent = "Username is required.";
+        return;
+    }
+
+    // Validate rating
+    if (rating === "" || isNaN(rating) || rating < 1 || rating > 5) {
+        errorMessage.textContent = "Please provide a rating between 1 and 5.";
+        return;
+    }
+
+    // Validate feedback
+    if (feedback.length < 10) {
+        errorMessage.textContent = "Feedback should be at least 10 characters long.";
+        return;
+    }
+
+    // If all validations pass, clear the error message and allow form submission
+    errorMessage.textContent = "";
+
+    // Form data is valid, so you can proceed with submitting it or handle it with Ajax, etc.
+    alert('Thank You for submitting the review!! Review submitted successfully!');
+    event.target.submit(); // Submit the form
 });
